@@ -1,0 +1,13 @@
+default:
+  outputs:
+    dev:
+      account: kna33024
+      database: bill_dbt_training
+      password: IP1oC4lL8@oh
+      role: dbt_dev
+      schema: dbt_braper
+      threads: 1
+      type: snowflake
+      user: braper
+      warehouse: transforming
+  target: dev
