@@ -1,1 +1,8 @@
-select * from raw.jaffle_shop.customers
+select
+    order_id as unique_field,
+    count(*) as n_records
+
+from bill_dbt_training.dbt_braper.stg_orders
+where order_id is not null
+group by order_id
+having count(*) > 1
