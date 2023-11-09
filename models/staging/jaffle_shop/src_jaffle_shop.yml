@@ -1,0 +1,52 @@
+version: 2
+
+sources:
+  - name: jaffle_shop
+    description: a clone of a Postgres application database
+    database: raw
+    schema: jaffle_shop
+    tables:
+      - name: customers
+        description: the raw customers data
+        columns:
+        - name: id
+          description: primary key for the raw customers data
+          tests:
+            - unique
+            - not_null
+        - name: first_name
+          description: first name of the customer
+        - name: last_name
+          description: last name of the customer
+      - name: payments
+        description: the raw payments data
+        columns: 
+          - name: id
+            description: primary key for the raw payments data
+          - name: orderid
+            description: identifies the order for which payment was received
+          - name: paymentmethod
+            description: identifies the method used for payment
+          - name: status
+            description: status of the payment
+          - name: amount
+            description: amount of the payment in cents
+          - name: created
+            description: date payment record was created
+          - name: _batched_at
+            description: date the payment was batched
+
+      - name: orders
+        description: the raw orders data
+        columns:
+          - name: id
+            description: primary key for the raw orders data
+            tests:
+              - unique
+              - not_null
+          - name: user_id
+            description: identifies the customer for this order
+        loaded_at_field: _etl_loaded_at
+        freshness:
+          warn_after: {count: 12, period: hour}
+          error_after: {count: 24, period: hour}
