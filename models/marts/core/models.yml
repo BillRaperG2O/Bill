@@ -1,0 +1,20 @@
+version: 2
+models:
+  - name: dim_customers
+    description: ''
+    columns:
+      - name: CUSTOMER_ID
+        description: A unique number that identifies each customer.
+      - name: FIRST_NAME
+        description: The customer's first name.
+      - name: FIRST_ORDER_DATE
+        description: The date the customer made their very first purchase.
+      - name: LAST_NAME
+        description: The customer's last name.
+      - name: LIFETIME_VALUE
+        description: The total amount of money the customer has spent over their lifetime
+          of purchases.
+      - name: MOST_RECENT_ORDER_DATE
+        description: The date the customer made their most recent purchase.
+      - name: NUMBER_OF_ORDERS
+        description: The total number of purchases the customer has made.
