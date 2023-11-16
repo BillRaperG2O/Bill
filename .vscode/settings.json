@@ -1,5 +1,5 @@
 {
-    "turntable.dbtVersion": "1.6",
+    "turntable.dbtVersion": "1.5",
     "turntable.warehouse": "snowflake",
     "dbt.queryLimit": 500
 }
