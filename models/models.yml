@@ -1,0 +1,5 @@
+version: 2
+models:
+  - name: union_tables_by_orders_prefix
+    description: ""
+    columns: []
