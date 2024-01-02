@@ -6,8 +6,9 @@
       target_schema='snapshots',
       unique_key='id',
 
-      strategy='timestamp',
-      updated_at='order_date',
+      strategy='check',
+      check_cols=['user_id','order_date','status','_etl_loaded_at']
+
     )
 }}
 

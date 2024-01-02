@@ -1,5 +1,5 @@
 {{ config( 
-    materialized='ephemeral'
+    materialized='view'
 )}}
 with payments as (
 
