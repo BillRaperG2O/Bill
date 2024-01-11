@@ -6,8 +6,10 @@
       target_schema='snapshots',
       unique_key='id',
 
-      strategy='check',
-      check_cols=['user_id','order_date','status','_etl_loaded_at']
+      strategy='timestamp',
+      invalidate_hard_deletes=True,
+      updated_at="_etl_loaded_at"
+      
 
     )
 }}

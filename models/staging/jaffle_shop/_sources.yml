@@ -7,11 +7,7 @@ sources:
     schema: jaffle_shop
     tables:
       - name: customers
-        description: |
-              the raw customers data
-              `dbt-profiler` results: 
-
-              {{ doc("dbt_profiler__customer") }}
+        description: the raw customers data
         columns:
         - name: id
           description: primary key for the raw customers data
